@@ -56,12 +56,21 @@ These points will be attributed manually if you do not manage to have your contr
 
 ### Selling and transferring 
 - Create a function to offer an animal on sale
+- Create a getter for animal sale status and price
 - Create a function to buy the animal
 - Call `ex6a_auctionAnimal_offer()` to show your code work (1 pt)
 - Call `ex6b_auctionAnimal_buy()` to show your code work (2 pt)
-- Call professor when you get here!
 
 ### Mix and match
+- The following exercices are in `Evaluator2.sol` . 
+- Create a function `declareAnimalWithParents()` to declare parents of an animal when creating it
+- Create a getter to retrieve parents id `getParents()`
+- Call `ex7a_breedAnimalWithParents() ` to get points (1pt)
+- Create a function to offer an animal for reproduction, against payment
+- Create a getter for animal reproduction status and price
+- Call `ex7b_offerAnimalForReproduction()` to get points (1pt)
+- Create a function to pay for reproductive rights
+- Call `ex7c_payForReproduction()` to get points (1pt)
 
 ### Extra points
 Extra points if you find bugs / corrections this TD can benefit from, and submit a PR to make it better.  Ideas:
@@ -69,8 +78,9 @@ Extra points if you find bugs / corrections this TD can benefit from, and submit
 - Publish the code of the Evaluator on Etherscan using the "Verify and publish" functionnality 
 
 ## TD addresses
-- Points contracts `0x46a9Dc47185F769ef9a11927B0f9d2fd0dEc3304`
-- Evaluator `0x6B19d275dA33857a3f35F7c1034048Ba1abF75CD`
+- Points contracts `0xa741a92358D2A5b7E42A8dd644b38f7F97c3C98E`
+- Evaluator `0xf64F129dD07ED2360e30B657D2916947E8C7273B`
+- Evaluator2 `0xf64F129dD07ED2360e30B657D2916947E8C7273B`
 
 ## Installing
 

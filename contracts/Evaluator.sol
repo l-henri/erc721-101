@@ -272,16 +272,6 @@ contract Evaluator
 
 	}
 
-	// // function fightAnimal()
-	// // public
-	// // {
-	// // }
-
-	// // function breedAnimal()
-	// // public
-	// // {
-	// // }
-
 	/* Internal functions and modifiers */ 
 	function submitExercice(IExerciceSolution studentExercice)
 	public
