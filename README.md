@@ -80,7 +80,7 @@ Extra points if you find bugs / corrections this TD can benefit from, and submit
 ## TD addresses
 - Points contracts `0xa741a92358D2A5b7E42A8dd644b38f7F97c3C98E`
 - Evaluator `0xf64F129dD07ED2360e30B657D2916947E8C7273B`
-- Evaluator2 `0xf64F129dD07ED2360e30B657D2916947E8C7273B`
+- Evaluator2 `0xf10465386e8ef23bcac03ee37a091bf8ce551143`
 
 ## Installing
 

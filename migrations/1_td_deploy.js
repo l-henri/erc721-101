@@ -57,7 +57,7 @@ async function setPermissionsAndRandomValues(deployer, network, accounts) {
 async function deployRecap(deployer, network, accounts) {
 	console.log("TDToken " + TDToken.address)
 	console.log("Evaluator " + Evaluator.address)
-	console.log("Evaluator2 " + Evaluator.address)
+	console.log("Evaluator2 " + Evaluator2.address)
 }
 
 
