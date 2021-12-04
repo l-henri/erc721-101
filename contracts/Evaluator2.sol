@@ -96,12 +96,12 @@ contract Evaluator2
 		require(!studentExerciceSolution[msg.sender].canReproduce(animalNumber), "Animal not for available for reproduction yet" );
 		require(studentExerciceSolution[msg.sender].reproductionPrice(animalNumber) == 0, "Animal not selling his ass yet");
 
-        // Offering animal for sale
+        // Offering animal for reproduction
         studentExerciceSolution[msg.sender].offerForReproduction(animalNumber, 0.0001 ether);
 
-        // Checking it is for sale
-        require(studentExerciceSolution[msg.sender].isAnimalForSale(animalNumber), "Animal reproduction not offered" );
-		require(studentExerciceSolution[msg.sender].animalPrice(animalNumber) == 0.0001 ether, "Animal reproduction price is incorrect");
+        // Checking it is for reproduction
+        require(studentExerciceSolution[msg.sender].canReproduce(animalNumber), "Animal reproduction not offered" );
+		require(studentExerciceSolution[msg.sender].reproductionPrice(animalNumber) == 0.0001 ether, "Animal reproduction price is incorrect");
 
 		// Try to set a reproduction for animals that's not ours. Sender should have an animal
 		uint animalNumber2 = studentExerciceSolution[msg.sender].tokenOfOwnerByIndex(msg.sender, 0);
