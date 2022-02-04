@@ -77,7 +77,7 @@ contract Evaluator
 		// Checking a solution was submitted
 		require(exerciceProgression[msg.sender][0], "No solution submitted");
 
-		// Verify that contract is a registeredBreeder 
+		// Retrieve expected characteristics
 		string memory name = readName(msg.sender);
 		bool wings = readWings(msg.sender);
 		uint legs = readLegs(msg.sender);
