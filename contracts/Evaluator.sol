@@ -1,4 +1,5 @@
-pragma solidity ^0.6.0;
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.9;
 pragma experimental ABIEncoderV2;
 
 import "./ERC20TD.sol";
@@ -25,7 +26,6 @@ contract Evaluator
  	event constructedCorrectly(address erc20Address);
 	
 	constructor(ERC20TD _TDERC20) 
-	public 
 	{
 		TDERC20 = _TDERC20;
 		emit constructedCorrectly(address(TDERC20));
@@ -110,7 +110,7 @@ contract Evaluator
 		// Register as a breeder
 		uint256 registrationPrice = studentExerciceSolution[msg.sender].registrationPrice();
 		require(address(this).balance >= registrationPrice, "Evaluator does not have enough ETH, plz giv eth");
-		studentExerciceSolution[msg.sender].registerMeAsBreeder.value(registrationPrice)();
+		studentExerciceSolution[msg.sender].registerMeAsBreeder{value: registrationPrice}();
 		require(studentExerciceSolution[msg.sender].isBreeder(address(this)), "Evaluator is not a breeder");
 		// Crediting points
 		if (!exerciceProgression[msg.sender][3])
@@ -257,7 +257,7 @@ contract Evaluator
 		require(address(this).balance >= animalPrice, "Your animal is too expensive for me");
 
 		// Buy the animal
-		studentExerciceSolution[msg.sender].buyAnimal.value(animalPrice)(animalForSale);
+		studentExerciceSolution[msg.sender].buyAnimal{value: animalPrice}(animalForSale);
 
 		// Check that it is mine
 		require(studentExerciceSolution[msg.sender].ownerOf(animalForSale) == address(this), "This animal was not transferred to me");

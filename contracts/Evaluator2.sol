@@ -1,4 +1,5 @@
-pragma solidity ^0.6.0;
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.9;
 pragma experimental ABIEncoderV2;
 
 import "./ERC20TD.sol";
@@ -25,7 +26,6 @@ contract Evaluator2
  	event constructedCorrectly(address erc20Address);
 	
 	constructor(ERC20TD _TDERC20) 
-	public 
 	{
 		TDERC20 = _TDERC20;
 		emit constructedCorrectly(address(TDERC20));
@@ -163,7 +163,7 @@ contract Evaluator2
         
 		// Pay for reproduction
 		require(address(this).balance >= reproductionPrice, "Your reproduction is too expensive for me");
-		studentExerciceSolution[msg.sender].payForReproduction.value(reproductionPrice)(animalAvailableForReproduction);		
+		studentExerciceSolution[msg.sender].payForReproduction{value: reproductionPrice}(animalAvailableForReproduction);		
 		require(studentExerciceSolution[msg.sender].authorizedBreederToReproduce(animalAvailableForReproduction) == address(this), "I am not allowed to reproduce");
 
 		// Reproduce
